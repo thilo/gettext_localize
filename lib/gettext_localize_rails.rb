@@ -250,7 +250,7 @@ module ActionView
       # countries.yml file.
       def date_select(object_name, method, options = {}, html_options = {})
         options.reverse_merge!(GettextLocalize::date_order) unless options.include? :order
-        orig_date_select(object_name, method, options)  #:order => [:day,:month,:year])# options)
+        orig_date_select(object_name, method, options, html_options)  #:order => [:day,:month,:year])# options)
       end
 
       alias_method :orig_select_date, :select_date
